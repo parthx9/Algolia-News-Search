@@ -1,6 +1,9 @@
+import { useHistory } from "react-router"
 import { convertDiffDates } from "../utils/helperFunctions"
 
 const NewsCard = (prop) => {
+
+  const history = useHistory()
 
   const getTitle = () => {
     if (prop.news.story_title && prop.news._highlightResult.title?.value) {
@@ -16,7 +19,7 @@ const NewsCard = (prop) => {
   }
 
   return (
-    <div className='row news-card'>
+    <div onClick={() => history.push('/news/' + prop.news.objectID)} className='row news-card'>
       <div className='col-1'>
         <div className='points'>
           <span className="fa fa-chevron-up"></span>

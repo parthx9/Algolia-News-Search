@@ -4,6 +4,7 @@ import {
   Route
 } from "react-router-dom";
 import Home from "../views/Home";
+import News from "../views/News";
 
 
 const RouterConfig = () => {
@@ -11,6 +12,7 @@ const RouterConfig = () => {
     <Router>
       <Switch>
         <Route exact path='/' component={Home} />
+        <Route exact path="/news/:newsID" component={News} />
       </Switch>
     </Router>
   )

@@ -13,7 +13,7 @@ const NewsCardList = (prop) => {
 
   return (
     <div>
-      {searchQuery ? renderCard() : null}
+      {prop.results ? renderCard() : null}
     </div>
   )
 }

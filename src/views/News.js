@@ -32,8 +32,8 @@ const News = () => {
                 </div>
                 <h3>{data.title}</h3>
               </div>
-              <p className='subtext'>Created by <span className="fw-bold">{data.author}</span>, <span className="fw-bold">{convertDiffDates(data.created_at)}</span></p>
-              <div className="bottom-bar">
+              <p className='subtext mb-1'>Created by <span className="fw-bold">{data.author}</span>, <span className="fw-bold">{convertDiffDates(data.created_at)}</span></p>
+              <div className="bottom-bar mb-3">
                 <div className="item">
                   <span className="fa fa-comment"></span>
                   <span className="fw-bold">{data.children.length}</span>
@@ -49,7 +49,12 @@ const News = () => {
             </div>
           </div>
         </div>
-      ) : null}
+      ) : <div className="loading">
+        <div className="spinner">
+        </div>
+        <h4 className="subtext">Retrieving data...</h4>
+        <p className="subtext">Please wait, this might take a few second</p>
+      </div>}
     </div>
   )
 }

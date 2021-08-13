@@ -39,7 +39,7 @@
 }
 /* COMMENTS */
 .comment-list{
-  display: flex;
+  /* display: flex; */
 }
 .comment-list .comment{
   /* text-overflow: clip; */

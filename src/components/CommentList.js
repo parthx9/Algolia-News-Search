@@ -19,11 +19,13 @@ const CommentList = (prop) => {
 
   return (
     <div className="comment-list">
-      <div>
-        <span className="fa fa-chevron-right me-3"></span>
-      </div>
-      <div>
-        {renderComments()}
+      <div className="row">
+        <div className="col-1">
+          <span className="fa fa-chevron-right me-3"></span>
+        </div>
+        <div className="col-11">
+          {renderComments()}
+        </div>
       </div>
     </div>
   )

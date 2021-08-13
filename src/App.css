@@ -55,8 +55,20 @@ body{
 }
 .results-area{
   margin: 7rem 0rem 0rem 0rem;
-  text-align: center;
+  /* text-align: center; */
 }
 .nothing-img{
   width: 300px;
+}
+
+/* NEWS CARD */
+.news-card{
+  background: #fff;
+  /* border: 1px solid rgb(84, 104, 255); */
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+}
+.news-card em{
+  background-color: yellow;
 }

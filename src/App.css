@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
-}
+@import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0%;
+  padding: 0%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background: #f9f5f5;
+  font-family: 'Montserrat', sans-serif !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.subtext{
+  color: #848ab8;
+}
+/* HEADER */
+.header{
+  padding: 1rem 3rem;
+  margin-bottom: 4rem;
+  background: #fff;
+  box-shadow: 0 0 40px -30px #000;
+}
+/* HOME PAGE */
+.search-area{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.search-bar{
+  margin-right: 2rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-area .search-bar input{
+  width: 700px;
+  height: 50px;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 2px solid rgb(84, 104, 255);
+  box-shadow: 0 0 40px -30px #000;
+}
+.search-area .search-bar input:focus{
+  outline: none;
+}
+.search-area .search-btn button{
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.3rem;
+  transition: box-shadow 0.15s ease 0s, transform 0.15s ease 0s;
+  will-change: box-shadow, transform;
+  background: radial-gradient(100% 100% at 100% 0%, rgb(90, 218, 255) 0%, rgb(84, 104, 255) 100%);
+  box-shadow: rgb(45 35 66 / 40%) 0px 2px 4px, rgb(45 35 66 / 30%) 0px 7px 13px -3px, rgb(58 65 111 / 50%) 0px -3px 0px inset;
+  text-shadow: rgb(0 0 0 / 40%) 0px 1px 0px;
+}
+.results-area{
+  margin: 7rem 0rem 0rem 0rem;
+  text-align: center;
+}
+.nothing-img{
+  width: 300px;
 }

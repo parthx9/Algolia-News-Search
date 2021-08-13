@@ -11,6 +11,9 @@ body{
 .subtext{
   color: #848ab8;
 }
+.logo{
+  cursor: pointer;
+}
 /* LOADER */
 .search-something .fa{
   font-size: 6rem;

@@ -2,6 +2,8 @@ import Comment from "./Comment"
 
 const CommentList = (prop) => {
 
+  // const [limits,]
+
   const renderComments = () => {
     return (
       prop.CommentList.map(i => {

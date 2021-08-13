@@ -53,7 +53,7 @@ const News = () => {
         <div className="spinner">
         </div>
         <h4 className="subtext">Retrieving data...</h4>
-        <p className="subtext">Please wait, this might take a few second</p>
+        <p className="subtext">Please wait, this might take a few seconds</p>
       </div>}
     </div>
   )

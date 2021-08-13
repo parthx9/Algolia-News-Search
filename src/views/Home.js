@@ -8,17 +8,25 @@ const Home = () => {
 
   const [searchTerm, setSearchTerm] = useState("")
   const [searchResults, setSearchResults] = useState([])
-  const [status, setStatus] = useState('loaded')
+  const [status, setStatus] = useState('start')
 
   const renderTry = () => {
-
     const samples = ['India', 'Bitcoin', 'Tesla']
-
     return samples.map(i => {
       return (
         <span onClick={() => setSearchTerm(i)} className='query'>{i}</span>
       )
     })
+  }
+
+  const renderInsights = () => {
+    if (status === "loaded") {
+      return (
+        <div className="insights">
+          <span className="subtext">Showing <span className="fw-bold">{searchResults.hitsPerPage}</span> of <span className="fw-bold" >{searchResults.nbHits}</span> results ( <span className="fw-bold">{searchResults.processingTimeMS / 1000} s</span>)</span>
+        </div>
+      )
+    }
   }
 
   const getResults = () => {
@@ -29,8 +37,8 @@ const Home = () => {
           setStatus('no-results')
           setSearchResults([])
         }
-        setSearchResults(res.hits)
-        setStatus('none')
+        setSearchResults(res)
+        setStatus('loaded')
       })
       .catch(err => {
         setStatus('no-results')
@@ -38,7 +46,7 @@ const Home = () => {
   }
 
   const checkStatus = () => {
-    if (status === 'loaded') {
+    if (status === 'start') {
       return (
         <div className="search-something">
           <span className="fa subtext fa-search"></span>
@@ -67,7 +75,7 @@ const Home = () => {
     }
 
     return (
-      <NewsCardList results={searchResults} />
+      <NewsCardList results={searchResults.hits} />
     )
   }
 
@@ -92,6 +100,7 @@ const Home = () => {
             </div>
           </div>
           <div className='results-area'>
+            {renderInsights()}
             {checkStatus()}
           </div>
         </div>

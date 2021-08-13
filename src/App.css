@@ -65,10 +65,50 @@ body{
 .news-card{
   background: #fff;
   /* border: 1px solid rgb(84, 104, 255); */
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
 }
 .news-card em{
   background-color: yellow;
+}
+.news-card .points{
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  width: 100%;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background-color: rgb(84, 104, 255);
+}
+.news-card .bottom-bar{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.news-card .bottom-bar .item{
+  margin-right: 1rem;
+  display: flex; 
+  justify-content: center;
+  align-items: baseline;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.3rem 0.2rem;
+  border-radius: 5px;
+}
+.news-card .bottom-bar .item:hover{
+  background: #f9f5f5;
+}
+.news-card .bottom-bar .item .fa ,.news-card .bottom-bar .item .far  {
+  margin-right: 0.5rem;
+  color: #848ab8;
+}
+.news-card a{
+  color: #23263b;
 }

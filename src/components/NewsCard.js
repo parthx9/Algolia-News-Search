@@ -19,7 +19,7 @@ const NewsCard = (prop) => {
   }
 
   return (
-    <div onClick={() => history.push('/news/' + prop.news.objectID)} className='row news-card'>
+    <div className='row news-card'>
       <div className='col-1'>
         <div className='points'>
           <span className="fa fa-chevron-up"></span>
@@ -28,7 +28,7 @@ const NewsCard = (prop) => {
       </div>
       <div className='col-11'>
         <div className="news-info">
-          <h3 dangerouslySetInnerHTML={{ __html: getTitle() }}></h3>
+          <h3 onClick={() => history.push('/news/' + prop.news.objectID)} dangerouslySetInnerHTML={{ __html: getTitle() }}></h3>
           <p className="subtext m-0">created by {prop.news.author}, {convertDiffDates(prop.news.created_at)}</p>
         </div>
         <div className='bottom-bar'>
